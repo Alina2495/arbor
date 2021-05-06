@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 $yellow: #F8CD00;
 $orange: #EFA507;
 $white: white;
 $black: black;
 $gray: #DEDEDD;
+$dark-blue: #2D4961;
+$placeholder: #8D8D8D;
+$transparent: transparent;
 body {
     color: $black;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .open-sans {
@@ -13,25 +18,98 @@ body {
     line-height: normal;
 }
 
+.cart-hover {
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+    .rounded-10 {
+        width: 113px;
+        height: 90px;
+    }
+    input[type=number] {
+        width: 30px;
+    }
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
 a {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
+    &:hover {
+        color: currentColor;
+    }
 }
 
 .bg {
-    &-orange {
+    &-yellow {
         background-color: $yellow;
     }
     &-gray {
         background-color: $gray;
     }
+    &-dark-blue {
+        background: #2D4961;
+    }
+}
+
+.linear {
+    background: linear-gradient(270deg, #EF5B16 0%, rgba(253, 201, 0, 0) 100%), #FDC900;
+}
+
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fw {
+    &-5 {
+        font-weight: 500;
+    }
+    &-6 {
+        font-weight: 600;
+    }
+}
+
+.fs-5 {
+    line-height: 24px;
+}
+
+h2,
+.h2,
+h3,
+.h3 {
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+    // font-size: 36px;
+    // line-height: 44px;
+}
+
+h4,
+.h4 {
+    font-weight: 500;
 }
 
 .shadow-box {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+img {
+    object-fit: cover;
+}
+
 .bttn {
+    display: inline-block;
     color: $white;
     border-radius: 500px;
     background-color: $orange;
@@ -42,7 +120,7 @@ a {
     font-weight: 500;
     white-space: nowrap;
     &-lg {
-        padding: 14px 40px;
+        padding: 15px 40px;
     }
 }
 
@@ -55,11 +133,34 @@ button {
     border-bottom: 1px dashed #EFA507;
 }
 
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 44px;
+.banner {
+    .linear {
+        padding: 8px 80px 8px 100px;
+    }
+    img {
+        width: 459px;
+        height: 372px;
+        object-fit: contain;
+        object-position: center;
+    }
+    .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+        background: $transparent;
+        opacity: 1;
+        border: 1px solid $placeholder;
+        &-active {
+            background-color: $placeholder;
+        }
+    }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 8px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 24px;
 }
 
 .categ-section {
@@ -69,12 +170,73 @@ h2 {
         }
         a {
             background: rgba(255, 255, 255, 0.5);
-            border-radius: 0px 0px 30px 30px;
+        }
+    }
+}
+
+.translucent {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.form-control {
+    padding: 8px 16px 8px 24px;
+    line-height: 24px;
+    border: none;
+    &::placeholder {
+        color: $placeholder;
+    }
+}
+
+.form-check {
+    padding-left: 0;
+}
+
+.form-check-input {
+    width: 1.5em;
+    height: 1.5em;
+    &:checked {
+        background-color: $orange;
+        border-color: $orange;
+        &[type=checkbox] {
+            background-image: url('../img/icons/check.svg');
+        }
+    }
+}
+
+.c-accent {
+    color: $yellow;
+}
+
+.services-section {
+    .rounded-30 {
+        height: 260px;
+        img {
+            object-fit: cover;
+        }
+    }
+}
+
+.news-section {
+    .swiper-slide {
+        height: unset;
+        border-radius: 10px;
+        overflow: hidden;
+        background: $white;
+        border: 1px solid #CACACA;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        img {
+            height: 200px;
+        }
+        time {
+            color: $placeholder;
         }
     }
 }
 
 .rounded {
+    &-10 {
+        border-radius: 10px;
+    }
     &-30 {
         border-radius: 30px;
         overflow: hidden;
