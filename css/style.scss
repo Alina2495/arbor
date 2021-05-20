@@ -2,16 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 $yellow: #F8CD00;
 $orange: #EFA507;
+$accent: #FF9900;
 $white: white;
 $black: black;
+$black2: #4F4F4F;
 $gray: #DEDEDD;
 $gray-light: #F2F2F2;
 $dark-blue: #2D4961;
 $placeholder: #8D8D8D;
 $transparent: transparent;
+html {
+    height: 100%;
+}
+
 body {
     color: $black;
     font-family: 'Open Sans', sans-serif;
+    min-height: 100%;
 }
 
 .open-sans {
@@ -48,6 +55,9 @@ a {
 .bg {
     &-yellow {
         background-color: $yellow;
+    }
+    &-orange {
+        background-color: #FF9900;
     }
     &-gray {
         background-color: $gray;
@@ -123,13 +133,15 @@ img {
     display: inline-block;
     color: $white;
     border-radius: 500px;
-    background-color: $orange;
+    background-color: $accent;
     padding: 8px 32px;
+    border: 1px solid $accent;
     font-size: 20px;
     line-height: 1em;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     white-space: nowrap;
+    text-align: center;
     &-lg {
         padding: 15px 40px;
     }
@@ -265,8 +277,13 @@ legend {
     }
 }
 
-.c-accent {
-    color: $yellow;
+.c {
+    &-accent {
+        color: $accent;
+    }
+    &-yellow {
+        color: $yellow;
+    }
 }
 
 .services-section {
@@ -298,6 +315,7 @@ legend {
 .rounded {
     &-10 {
         border-radius: 10px;
+        overflow: hidden;
     }
     &-30 {
         border-radius: 30px;
@@ -310,7 +328,7 @@ legend {
     color: #4B4B4B;
     font-family: 'Roboto', sans-serif;
     &-item {
-        display: inline-block;
+        display: inline-flex;
         &.active {
             color: currentColor;
         }
@@ -381,8 +399,274 @@ legend {
     }
 }
 
+.quantity-el {
+    height: 30px;
+    max-width: 105px;
+    input {
+        width: 100%;
+    }
+}
+
+.shopping-sidebar {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    font-size: 20px;
+}
+
+.news-filter {
+    button {
+        &.active {
+            font-weight: 600;
+            border-bottom: 2px solid $accent;
+        }
+    }
+}
+
+.company-news {
+    .new-img {
+        width: 460px;
+        height: 390px;
+    }
+    p {
+        overflow-y: hidden;
+    }
+}
+
+// PAGINATION
+.page-item {
+    margin-right: 4px;
+    &:last-of-type {
+        margin-right: 0;
+    }
+    .page-link {
+        color: #797979;
+        border-radius: 10px !important;
+        border-color: $transparent;
+        line-height: 20px;
+        &:focus,
+        &:hover {
+            background-color: transparent;
+            box-shadow: 0 0 0 0.25rem rgba($accent, 0.3);
+        }
+    }
+    &.active {
+        .page-link {
+            background-color: $accent;
+            border-color: $accent;
+            color: $white;
+        }
+    }
+    &.disabled {
+        .page-link {
+            border-color: $transparent;
+        }
+        svg path {
+            stroke: $gray;
+            opacity: 0.8;
+        }
+    }
+}
+
+.gallery-top {
+    height: 390px;
+    .swiper-slide {
+        border-radius: 10px;
+        display: flex;
+    }
+    img {
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.swiper-button {
+    &-next,
+    &-prev {
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: rgba($black, 0.4);
+            svg {
+                path {
+                    stroke: $white;
+                }
+            }
+        }
+        &::after {
+            content: '';
+        }
+    }
+    &-next {
+        border-radius: 0 10px 10px 0;
+    }
+    &-prev {
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+.gallery-thumbs {
+    height: 90px;
+    .swiper-slide {
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        &.swiper-slide-thumb-active {
+            border: 1px solid $accent;
+        }
+    }
+    img {
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.catalogue-sidebar {
+    background: #F7F7F7;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    .bg-dark {
+        background-color: $black2 !important;
+    }
+    .border-bottom {
+        &:hover {
+            background-color: $accent;
+            color: $white;
+            svg path {
+                stroke: $white;
+            }
+        }
+    }
+}
+
+// COLORS start
+.colors.mini {
+    .color {
+        width: 20px;
+        height: 20px;
+        &::after {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+.colors-wr {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+}
+
+.colors-wr.mini {
+    font-size: 20px;
+    color: #19191D;
+    padding-bottom: 17px;
+    input {
+        visibility: visible;
+        width: 1em;
+        height: 1em;
+    }
+}
+
+.color-input,
+.color {
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+}
+
+.color {
+    border-radius: 50%;
+    display: block;
+    z-index: 1;
+}
+
+.color-wr {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    label {
+        font-size: 1rem !important;
+        color: $black !important;
+        margin-left: 16px;
+    }
+    .color-input {
+        z-index: 20;
+        opacity: 0;
+        position: absolute;
+        &:checked+.color {
+            border: 1px solid $accent;
+        }
+        +.color {
+            z-index: 5;
+            width: 1em;
+            height: 1em;
+            background-color: currentColor;
+        }
+    }
+}
+
+// COLORS end
+footer {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
 @media screen and (min-width: 1660px) {
     .container {
         max-width: 1624px;
+    }
+}
+
+@media (max-width: 1399.98px) {}
+
+@media (max-width: 1199.98px) {
+    .gallery-top {
+        height: 250px;
+    }
+    .gallery-thumbs {
+        height: 60px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .shopping-sidebar {
+        font-size: 1rem;
+    }
+    .company-news {
+        .new-img {
+            width: 40%;
+            height: 190px;
+        }
+        p {
+            max-height: 100px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {}
+
+@media (max-width: 575.98px) {
+    .banner {
+        .linear {
+            padding: 16px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .company-news {
+        .new-img {
+            width: 100%;
+            height: 250px;
+        }
+    }
+    .gallery-top {
+        height: 250px;
+    }
+    .gallery-thumbs {
+        height: 60px;
     }
 }
