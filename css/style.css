@@ -88,7 +88,8 @@ h4,
 }
 
 h1,
-.h1 {
+.h1,
+.h4 {
   font-weight: 700;
 }
 
@@ -109,7 +110,7 @@ h2 {
 
 h4,
 .h4 {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .fw-5 {
@@ -800,6 +801,11 @@ input[type=number] {
   width: 56px;
 }
 
+.required::after {
+  content: " *";
+  color: #D00B0B;
+}
+
 footer {
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -840,6 +846,9 @@ footer {
   .shopping-sidebar {
     font-size: 1rem;
   }
+  .card .card-hov .b-accent {
+    width: 86px;
+  }
   .company-news .new-img {
     width: 40%;
     height: 190px;
@@ -851,11 +860,11 @@ footer {
 
 @media (max-width: 575.98px) {
   .banner .linear {
-    padding: 16px;
+    padding: 16px 16px 60px 16px;
   }
   .banner img {
     width: 100%;
-    height: auto;
+    height: 220px;
   }
   .company-news .new-img {
     width: 100%;

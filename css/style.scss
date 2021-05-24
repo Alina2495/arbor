@@ -91,7 +91,8 @@ h4,
 }
 
 h1,
-.h1 {
+.h1,
+.h4 {
     font-weight: 700;
 }
 
@@ -112,7 +113,7 @@ h2 {
 
 h4,
 .h4 {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .fw {
@@ -726,6 +727,13 @@ input[type=number] {
     }
 }
 
+.required {
+    &::after {
+        content: " *";
+        color: #D00B0B;
+    }
+}
+
 footer {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -769,6 +777,9 @@ footer {
     .shopping-sidebar {
         font-size: 1rem;
     }
+    .card .card-hov .b-accent {
+        width: 86px;
+    }
     .company-news {
         .new-img {
             width: 40%;
@@ -785,11 +796,11 @@ footer {
 @media (max-width: 575.98px) {
     .banner {
         .linear {
-            padding: 16px;
+            padding: 16px 16px 60px 16px;
         }
         img {
             width: 100%;
-            height: auto;
+            height: 220px;
         }
     }
     .company-news {
