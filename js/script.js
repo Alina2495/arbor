@@ -1,4 +1,5 @@
 var swiper = new Swiper(".swiper-banner", {
+    spaceBetween: 6,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -138,4 +139,24 @@ var galleryTop = new Swiper('.card-gallery-top', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     }
+});
+
+
+// show desktop menu while hover to menu link 
+$(function() {
+    $(".menu-hover-link").mouseenter(function() {
+        $('.menu-hover').removeClass("d-none");
+    });
+    $(".menu-hover").mouseleave(function() {
+        $('.menu-hover').addClass("d-none");
+    });
+});
+// show desktop menu while hover to menu link 
+$(function() {
+    $(".cart-hover").mouseenter(function() {
+        $('.cart-hover-block').removeClass("d-none");
+    });
+    $(".cart-hover").mouseleave(function() {
+        $('.cart-hover-block').addClass("d-none");
+    });
 });
