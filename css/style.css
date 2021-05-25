@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 html {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -279,10 +279,12 @@ legend {
 }
 
 .form-check .form-check-input[type=radio] {
-  border-radius: 50%;
+  background-color: #F2F2F2;
 }
 
 .form-check .form-check-input[type=radio]:checked {
+  border-color: #FF9900;
+  background-color: white;
   background-image: url("../img/icons/checked-radio.svg");
   background-size: contain;
 }
@@ -804,6 +806,19 @@ input[type=number] {
 .required::after {
   content: " *";
   color: #D00B0B;
+}
+
+.add-sawing-block .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.add-sawing-block .row:first-child {
+  display: none;
 }
 
 footer {

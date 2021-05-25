@@ -160,3 +160,21 @@ $(function() {
         $('.cart-hover-block').addClass("d-none");
     });
 });
+
+function changeFieldset(val, name, formId) {
+    document.querySelectorAll('#' + formId + ' fieldset.' + name).forEach(function(item, i, arr) {
+        if (item.id != val) {
+            item.classList.add('d-none');
+            item.setAttribute("disabled", "disabled");
+        } else {
+            item.classList.remove('d-none');
+            item.removeAttribute("disabled");
+        }
+    });
+}
+
+/* adding new inputs */
+function addInput(elem) {
+    let cloneInput = elem.previousElementSibling.cloneNode(true);
+    elem.after(cloneInput);
+}
