@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная - Arbor.ru</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- styles -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
@@ -34,7 +43,7 @@
                     <span class="">Вне рабочее время <br/> просим оставить заявку</span>
                 </div>
                 <div class="d-flex flex-column flex-lg-row">
-                    <div class="d-flex flex-column flex-xl-row align-items-start">
+                    <div class="d-flex flex-column flex-xl-row align-items-start me-lg-3 me-xl-0">
                         <!-- email -->
                         <span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +71,7 @@
                     <img src="img/images/logo.svg" alt="Arbor.ru" height="71" width="85">
                 </a>
                 <!-- catalogue -->
-                <a href="catalogue.html" class="p-lg-1 bttn d-flex align-items-center mx-3 mx-xxl-4 menu-hover-link">
+                <a href="catalogue.html" class="p-1 py-xl-2 px-xl-3 bttn d-flex align-items-center mx-3 mx-xxl-4 menu-hover-link">
                     <svg class="me-xxl-2" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 12.5H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M3 6.53223H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -322,9 +331,9 @@
 
     <main>
         <section class="py-5 banner container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="swiper-container swiper-banner mb-4 mb-lg-0">
+            <div class="row gx-lg-3 gx-xxl-4">
+                <div class="col-lg-7 col-xl-8 mb-3 mb-lg-0">
+                    <div class="swiper-container swiper-banner mb-4 mb-lg-0 h-100">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="d-flex flex-column-reverse align-items-center text-center text-xl-start flex-xl-row linear rounded-30">
@@ -360,8 +369,8 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="h-100 d-flex flex-column justify-content-center rounded-30 bg-yellow p-4 p-md-5">
+                <div class="col-lg-5 col-xl-4">
+                    <div class="h-100 d-flex flex-column justify-content-center rounded-30 bg-yellow p-4 p-md-5 p-lg-4">
                         <h3 class="mb-4">Широкий выбор ЛДСП</h3>
                         <p class="fs-5 mb-4">Как принято считать, базовые сценарии поведения пользователей набирают популярность среди определённых слоёв населения, а значит, должны быть разоблачены</p>
                         <a href="#" class="roboto fs-5 fw-5 d-flex align-items-center">
@@ -378,7 +387,7 @@
 
         <section class="container py-5 categ-section">
             <h2 class="mb-4">Категории товаров</h2>
-            <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-4 text-center h4">
+            <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-4 text-center h4 fw-5">
                 <div>
                     <div class="rounded-30 position-relative">
                         <img class="w-100 h-100" src="img/images/categ.jpeg" alt="">
@@ -401,6 +410,18 @@
                     <div class="rounded-30 position-relative">
                         <img class="w-100 h-100" src="img/images/categ.jpeg" alt="">
                         <a href="" class="p-3 w-100 start-0 bottom-0 position-absolute stretched-link">ЛДСП</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="rounded-30 position-relative">
+                        <img class="w-100 h-100" src="img/images/categ-2.jpeg" alt="">
+                        <a href="" class="p-3 w-100 start-0 bottom-0 position-absolute stretched-link">ХДФ</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="rounded-30 position-relative">
+                        <img class="w-100 h-100" src="img/images/categ-3.jpeg" alt="">
+                        <a href="" class="p-3 w-100 start-0 bottom-0 position-absolute stretched-link">МДФ</a>
                     </div>
                 </div>
                 <div>
@@ -421,14 +442,14 @@
             </div>
         </section>
 
-        <section class="py-5 services-section bg-gray">
+        <section class="py-5 services-section bg-gray-light">
             <div class="container">
                 <h2 class="h1 mb-3 mb-lg-5">Услуги</h2>
                 <div class="row row-cols-md-2 mb-4 align-items-center">
                     <div>
                         <div class="rounded-30 position-relative text-center">
                             <img class="w-100 h-100" src="img/images/service-1.jpeg" alt="">
-                            <a href="" class="translucent h4 m-0 p-3 w-100 start-0 bottom-0 position-absolute stretched-link">Распиловка</a>
+                            <a href="" class="translucent h4 m-0 p-3 w-100 start-0 bottom-0 position-absolute stretched-link fw-5">Распиловка</a>
                         </div>
                     </div>
                     <div class="mt-3 text-center text-md-start">
@@ -445,7 +466,7 @@
                     <div>
                         <div class="rounded-30 position-relative">
                             <img class="w-100 h-100" src="img/images/service-2.jpeg" alt="">
-                            <a href="" class="translucent h4 m-0 p-3 w-100 start-0 bottom-0 position-absolute stretched-link">Кромление</a>
+                            <a href="" class="translucent h4 m-0 p-3 w-100 start-0 bottom-0 position-absolute stretched-link fw-5">Кромление</a>
                         </div>
                     </div>
                 </div>

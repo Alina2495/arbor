@@ -174,6 +174,7 @@ button {
 .banner {
     .linear {
         padding: 8px 80px 8px 100px;
+        height: 100%;
     }
     img {
         width: 459px;
@@ -205,6 +206,7 @@ button {
     .row {
         .rounded-30 {
             height: 230px;
+            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
         }
         a {
             background: rgba(255, 255, 255, 0.5);
@@ -673,13 +675,14 @@ input[type=number] {
 
 .card-swiper {
     position: relative;
-    height: 430px;
+    height: 430px + 17px+17px;
+    padding: 17px 0;
     .card-gallery-thumbs {
         position: unset;
         width: 212px;
         overflow: hidden;
         margin: auto;
-        height: 90%;
+        height: 100%;
     }
     .card-gallery-top {
         width: 512px;
@@ -699,7 +702,7 @@ input[type=number] {
             width: 56px;
             height: 56px;
             margin: 0;
-            left: 9%;
+            left: 85px;
             top: unset;
             &.swiper-button-disabled {
                 opacity: 1;
@@ -707,11 +710,11 @@ input[type=number] {
             }
         }
         &-prev {
-            top: -17px;
+            top: 0px;
             bottom: unset;
         }
         &-next {
-            bottom: -17px;
+            bottom: 0px;
         }
     }
 }
@@ -762,9 +765,44 @@ footer {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (min-width: 784px+24px) {
+    #checkoutModal {
+        .modal-dialog {
+            max-width: 784px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px - 24px) {
+    #paymentQRModal {
+        .modal-dialog {
+            max-width: 992px - 48px;
+        }
+    }
+}
+
+@media screen and (min-width: 1056px+24px) {
+    #paymentQRModal {
+        .modal-dialog {
+            max-width: 1056px;
+        }
+    }
+}
+
 @media screen and (min-width: 1660px) {
     .container {
         max-width: 1624px;
+    }
+}
+
+@media screen and (max-width: 1659px) {
+    .card-swiper {
+        .swiper-button {
+            &-prev,
+            &-next {
+                left: 55px;
+            }
+        }
     }
 }
 
@@ -789,15 +827,41 @@ footer {
 }
 
 @media (max-width: 1199.98px) {
+    .banner {
+        .linear {
+            padding: 10px 40px 20px 40px;
+        }
+        img {
+            width: auto;
+            height: 190px;
+        }
+        .col-lg-5 p {
+            font-size: 16px !important;
+        }
+    }
     .new-gallery-top {
         height: 250px;
     }
     .new-gallery-thumbs {
         height: 60px;
     }
+    .card-swiper {
+        height: 400px;
+        .swiper-button {
+            &-prev,
+            &-next {
+                left: 40px;
+            }
+        }
+    }
 }
 
 @media (max-width: 991.98px) {
+    .banner {
+        .linear {
+            padding-bottom: 60px;
+        }
+    }
     .shopping-sidebar {
         font-size: 1rem;
     }
@@ -811,6 +875,14 @@ footer {
         }
         p {
             max-height: 100px;
+        }
+    }
+    .card-swiper {
+        .swiper-button {
+            &-prev,
+            &-next {
+                left: 70px;
+            }
         }
     }
 }
@@ -852,21 +924,12 @@ footer {
     }
     .card-swiper {
         height: 80vw;
-        .card-gallery-top {
-            height: 90%;
-        }
         .swiper-button {
             &-prev,
             &-next {
                 width: 36px;
                 height: 36px;
                 left: 8%;
-            }
-            &-prev {
-                top: 1%;
-            }
-            &-next {
-                bottom: 1%;
             }
         }
     }

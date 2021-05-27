@@ -6,13 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Корзина - Arbor.ru</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- styles -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="d-flex flex-column">
-    <header>
+    <header class="d-none">
         <div class="bg-yellow py-1 open-sans">
             <div class="container d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
@@ -232,15 +241,15 @@
             </nav>
             <h1 class="mb-4">Корзина</h1>
 
-            <div class="d-flex flex-column flex-lg-row align-items-start justify-content-xxl-between mb-4 border-bottom pb-4">
-                <div class="img">
+            <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start justify-content-xxl-between mb-4 border-bottom pb-4">
+                <div class="img mb-3 mb-md-0">
                     <img src="img/images/cart-item.jpeg" class="w-100 h-100 rounded-10" alt="">
                 </div>
                 <div class="d-flex flex-column flex-lg-row flex-fill align-items-center align-items-lg-start text-center text-lg-start">
                     <div class="info">
                         <div class="h4 fw-6">ЛДСП Цемент (К) 2750*1830*16</div>
                         <div class="text-dark fs-5">Код: 00-0012345</div>
-                        <a href="card.html" class="d-flex align-items-center p-0 c-accent roboto fw-5 mt-3">
+                        <a href="card.html" class="d-inline-flex align-items-center p-0 c-accent roboto fw-5 mt-3">
                             <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 5V19" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M5 12H19" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -248,8 +257,8 @@
                             <span>Добавить услугу</span>
                         </a>
                     </div>
-                    <div class="amount">
-                        <div class="quantity-el d-flex align-items-center justify-content-between rounded-pill bg-orange px-3">
+                    <div class="amount my-3 my-md-0">
+                        <div class="quantity-el mx-auto mx-md-0 d-flex align-items-center justify-content-between rounded-pill bg-orange px-3">
                             <button class="p-0" type="button">
                                 <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4.32568 8H13.659" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -268,7 +277,7 @@
                         <div class="h4 fw-6">3 505 руб.</div>
                         <div class="fs-5">цена за 1 шт.</div>
                     </div>
-                    <div class="delete d-flex justify-content-xl-center">
+                    <div class="delete mt-3 mt-md-0 d-flex justify-content-xl-center">
                         <button class="">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.0007 31.6667C10.0007 33.5 11.5007 35 13.334 35H26.6673C28.5007 35 30.0007 33.5 30.0007 31.6667V11.6667H10.0007V31.6667ZM31.6673 6.66667H25.834L24.1673 5H15.834L14.1673 6.66667H8.33398V10H31.6673V6.66667Z" fill="#323232"/>
@@ -359,6 +368,24 @@
                     </div>
                 </div>
             </div>
+
+            <div class="d-flex flex-column-reverse flex-md-row justify-content-between align-items-md-end">
+                <a href="catalogue.html" class="c-accent roboto fw-5 fs-5 d-flex align-items-center mt-4 mt-md-0">
+                    <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12H5" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 19L5 12L12 5" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Вернуться в каталог</span>
+                </a>
+                <div>
+                    <div class="d-flex justify-content-md-end align-items-baseline mb-3 mb-lg-4 mb-xl-5">
+                        <div class="roboto fw-bold fs-4 me-4">Итого: </div>
+                        <div class="fw-6 fs-5">10 515 ₽</div>
+                    </div>
+                    <a href="order.html" class="bttn bttn-lg">Оформление заказа</a>
+                </div>
+            </div>
+
         </div>
 
         <!-- CTA FORM -->

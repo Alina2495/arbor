@@ -171,6 +171,7 @@ button {
 
 .banner .linear {
   padding: 8px 80px 8px 100px;
+  height: 100%;
 }
 
 .banner img {
@@ -204,6 +205,8 @@ button {
 
 .categ-section .row .rounded-30 {
   height: 230px;
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
 }
 
 .categ-section .row a {
@@ -745,7 +748,8 @@ input[type=number] {
 
 .card-swiper {
   position: relative;
-  height: 430px;
+  height: 464px;
+  padding: 17px 0;
 }
 
 .card-swiper .card-gallery-thumbs {
@@ -753,7 +757,7 @@ input[type=number] {
   width: 212px;
   overflow: hidden;
   margin: auto;
-  height: 90%;
+  height: 100%;
 }
 
 .card-swiper .card-gallery-top {
@@ -775,7 +779,7 @@ input[type=number] {
   width: 56px;
   height: 56px;
   margin: 0;
-  left: 9%;
+  left: 85px;
   top: unset;
 }
 
@@ -785,12 +789,12 @@ input[type=number] {
 }
 
 .card-swiper .swiper-button-prev {
-  top: -17px;
+  top: 0px;
   bottom: unset;
 }
 
 .card-swiper .swiper-button-next {
-  bottom: -17px;
+  bottom: 0px;
 }
 
 .cart-page .img {
@@ -845,9 +849,33 @@ footer {
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (min-width: 808px) {
+  #checkoutModal .modal-dialog {
+    max-width: 784px;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  #paymentQRModal .modal-dialog {
+    max-width: 944px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  #paymentQRModal .modal-dialog {
+    max-width: 1056px;
+  }
+}
+
 @media screen and (min-width: 1660px) {
   .container {
     max-width: 1624px;
+  }
+}
+
+@media screen and (max-width: 1659px) {
+  .card-swiper .swiper-button-prev, .card-swiper .swiper-button-next {
+    left: 55px;
   }
 }
 
@@ -868,15 +896,34 @@ footer {
 }
 
 @media (max-width: 1199.98px) {
+  .banner .linear {
+    padding: 10px 40px 20px 40px;
+  }
+  .banner img {
+    width: auto;
+    height: 190px;
+  }
+  .banner .col-lg-5 p {
+    font-size: 16px !important;
+  }
   .new-gallery-top {
     height: 250px;
   }
   .new-gallery-thumbs {
     height: 60px;
   }
+  .card-swiper {
+    height: 400px;
+  }
+  .card-swiper .swiper-button-prev, .card-swiper .swiper-button-next {
+    left: 40px;
+  }
 }
 
 @media (max-width: 991.98px) {
+  .banner .linear {
+    padding-bottom: 60px;
+  }
   .shopping-sidebar {
     font-size: 1rem;
   }
@@ -889,6 +936,9 @@ footer {
   }
   .company-news p {
     max-height: 100px;
+  }
+  .card-swiper .swiper-button-prev, .card-swiper .swiper-button-next {
+    left: 70px;
   }
 }
 
@@ -924,19 +974,10 @@ footer {
   .card-swiper {
     height: 80vw;
   }
-  .card-swiper .card-gallery-top {
-    height: 90%;
-  }
   .card-swiper .swiper-button-prev, .card-swiper .swiper-button-next {
     width: 36px;
     height: 36px;
     left: 8%;
-  }
-  .card-swiper .swiper-button-prev {
-    top: 1%;
-  }
-  .card-swiper .swiper-button-next {
-    bottom: 1%;
   }
 }
 /*# sourceMappingURL=style.css.map */
