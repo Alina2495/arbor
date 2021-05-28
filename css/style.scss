@@ -171,7 +171,7 @@ button {
     border-bottom: 1px dashed #EFA507;
 }
 
-.banner {
+.first-slider {
     .linear {
         padding: 8px 80px 8px 100px;
         height: 100%;
@@ -504,26 +504,20 @@ legend {
         object-fit: cover;
         object-position: center;
     }
-}
-
-.new-swiper-button {
-    &-next,
-    &-prev {
-        transition: background-color 0.3s ease;
-        &:hover {
-            background-color: rgba($black, 0.4);
-            svg {
-                path {
-                    stroke: $white;
-                }
+    .swiper-button {
+        &-next,
+        &-prev {
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color: rgba($black, 0.2);
             }
         }
-    }
-    &-next {
-        border-radius: 0 10px 10px 0;
-    }
-    &-prev {
-        border-radius: 10px 0 0 10px;
+        &-next {
+            border-radius: 0 10px 10px 0;
+        }
+        &-prev {
+            border-radius: 10px 0 0 10px;
+        }
     }
 }
 
@@ -564,26 +558,11 @@ legend {
     }
 }
 
-.colors.mini {
-    .color {
-        width: 20px;
-        height: 20px;
-        &::after {
-            width: 15px;
-            height: 15px;
-        }
-    }
-}
-
 .colors-wr {
-    display: flex;
-    flex-direction: column;
-    font-size: 40px;
-}
-
-.colors-wr.mini {
     font-size: 20px;
     color: #19191D;
+    display: flex;
+    flex-direction: column;
     input {
         visibility: visible;
         width: 1em;
@@ -632,6 +611,32 @@ legend {
             background-color: currentColor;
             cursor: pointer;
         }
+    }
+}
+
+.sort-items {
+    label {
+        cursor: pointer;
+    }
+    input[type=radio] {
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        &:checked {
+            +label {
+                color: $accent;
+            }
+            +label+svg {
+                transform: rotateX(180deg);
+                path {
+                    stroke: $accent;
+                }
+            }
+        }
+    }
+    svg {
+        transform-origin: center center;
+        vertical-align: middle;
     }
 }
 
@@ -755,9 +760,9 @@ img.rounded-10.bg-gray-light {
     .row {
         display: flex;
         align-items: stretch;
-    }
-    .row:first-child {
-        display: none;
+        &:first-child {
+            display: none;
+        }
     }
 }
 
@@ -793,6 +798,16 @@ footer {
     .container {
         max-width: 1624px;
     }
+    .card .card-hov {
+        flex-direction: row !important;
+        .b-accent {
+            margin-bottom: 0px !important;
+        }
+        .bttn {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+    }
 }
 
 @media screen and (max-width: 1659px) {
@@ -804,10 +819,17 @@ footer {
             }
         }
     }
+    .card {
+        .card-hov {
+            .b-accent {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 1399.98px) {
-    .banner {
+    .first-slider {
         .linear {
             padding: 8px 50px;
         }
@@ -824,10 +846,13 @@ footer {
             width: 150px;
         }
     }
+    .new-gallery-top {
+        height: 310px;
+    }
 }
 
 @media (max-width: 1199.98px) {
-    .banner {
+    .first-slider {
         .linear {
             padding: 10px 40px 20px 40px;
         }
@@ -854,19 +879,19 @@ footer {
             }
         }
     }
+    .card:hover {
+        width: calc(100% - 8px);
+    }
 }
 
 @media (max-width: 991.98px) {
-    .banner {
+    .first-slider {
         .linear {
             padding-bottom: 60px;
         }
     }
     .shopping-sidebar {
         font-size: 1rem;
-    }
-    .card .card-hov .b-accent {
-        width: 86px;
     }
     .company-news {
         .new-img {
@@ -885,12 +910,30 @@ footer {
             }
         }
     }
+    .new-gallery-thumbs {
+        height: 40px;
+    }
+    .card {
+        .card-hov {
+            display: flex;
+        }
+    }
 }
 
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+    .new-gallery-top {
+        height: 70vw;
+    }
+    .new-gallery-thumbs {
+        height: 80px;
+    }
+    .news-filter {
+        overflow-x: scroll;
+    }
+}
 
 @media (max-width: 575.98px) {
-    .banner {
+    .first-slider {
         .linear {
             padding: 16px 16px 60px 16px;
         }
@@ -906,7 +949,7 @@ footer {
         }
     }
     .new-gallery-top {
-        height: 250px;
+        height: 80vw;
     }
     .new-gallery-thumbs {
         height: 60px;
@@ -914,12 +957,6 @@ footer {
     .card {
         .card-img-top {
             height: 150px;
-        }
-        .card-hov {
-            display: flex;
-            .b-accent {
-                width: 100%;
-            }
         }
     }
     .card-swiper {
