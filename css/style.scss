@@ -38,6 +38,9 @@ body {
     .cart-hover {
         box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
     }
+    .bg-gray-light {
+        background-color: $transparent;
+    }
 }
 
 .cart-hover {
@@ -163,6 +166,10 @@ img {
     text-align: center;
     &-lg {
         padding: 15px 40px;
+    }
+    &:hover {
+        color: $white;
+        background-color: $orange;
     }
 }
 
@@ -659,6 +666,7 @@ legend {
         height: 180px;
     }
     .card-hov {
+        z-index: 5;
         display: none;
         .b-accent {
             width: 100px;
