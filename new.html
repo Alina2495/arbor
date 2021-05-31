@@ -21,6 +21,7 @@
 </head>
 
 <body class="d-flex flex-column">
+    <!-- header -->
     <header class="d-none d-lg-block">
         <div class="bg-yellow py-1 open-sans">
             <div class="container d-flex align-items-center justify-content-between">
@@ -328,6 +329,200 @@
             </div>
         </div>
     </header>
+
+    <!-- mobile header -->
+    <header class="d-lg-none shadow-box container py-2 bg-white d-flex align-items-center">
+        <!-- menu -->
+        <button data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5 19.5H28.5" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.5 13.532H28.5" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.5 25.4678H28.5" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>        
+        </button>
+        <!-- logo -->
+        <a href="index.html" class="ms-2 me-auto">
+            <img src="img/images/logo.svg" width="41" height="34" alt="">
+        </a>
+        <!-- tel -->
+        <a href="tel:+7(917)234-56-78">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.0001 16.9201V19.9201C22.0012 20.1986 21.9441 20.4743 21.8326 20.7294C21.721 20.9846 21.5574 21.2137 21.3521 21.402C21.1469 21.5902 20.9046 21.7336 20.6408 21.8228C20.377 21.912 20.0974 21.9452 19.8201 21.9201C16.7429 21.5857 13.7871 20.5342 11.1901 18.8501C8.77388 17.3148 6.72539 15.2663 5.19006 12.8501C3.50003 10.2413 2.4483 7.27109 2.12006 4.1801C2.09507 3.90356 2.12793 3.62486 2.21656 3.36172C2.30518 3.09859 2.44763 2.85679 2.63482 2.65172C2.82202 2.44665 3.04986 2.28281 3.30385 2.17062C3.55783 2.05843 3.8324 2.00036 4.11006 2.0001H7.11006C7.59536 1.99532 8.06585 2.16718 8.43382 2.48363C8.80179 2.80008 9.04213 3.23954 9.11005 3.7201C9.23668 4.68016 9.47151 5.62282 9.81006 6.5301C9.9446 6.88802 9.97372 7.27701 9.89396 7.65098C9.81421 8.02494 9.62892 8.36821 9.36005 8.6401L8.09006 9.9101C9.51361 12.4136 11.5865 14.4865 14.0901 15.9101L15.3601 14.6401C15.6319 14.3712 15.9752 14.1859 16.3492 14.1062C16.7231 14.0264 17.1121 14.0556 17.4701 14.1901C18.3773 14.5286 19.32 14.7635 20.2801 14.8901C20.7658 14.9586 21.2095 15.2033 21.5266 15.5776C21.8437 15.9519 22.0122 16.4297 22.0001 16.9201Z" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <!-- search -->
+        <a href="" class="mx-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 21L15.8 15.8" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <!-- cart -->
+        <a class="position-relative small" href="cart.html">
+            <!-- badge -->
+            <div class="rounded-circle position-absolute bg-orange px-1 small roboto top-0 start-100 translate-middle">11</div>
+            <!-- icon -->
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                    <path d="M9 22.8448C9.55228 22.8448 10 22.3994 10 21.8501C10 21.3008 9.55228 20.8555 9 20.8555C8.44772 20.8555 8 21.3008 8 21.8501C8 22.3994 8.44772 22.8448 9 22.8448Z" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 22.8448C20.5523 22.8448 21 22.3994 21 21.8501C21 21.3008 20.5523 20.8555 20 20.8555C19.4477 20.8555 19 21.3008 19 21.8501C19 22.3994 19.4477 22.8448 20 22.8448Z" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 1.95728H5L7.68 15.2755C7.77144 15.7335 8.02191 16.1448 8.38755 16.4376C8.75318 16.7303 9.2107 16.8859 9.68 16.8769H19.4C19.8693 16.8859 20.3268 16.7303 20.6925 16.4376C21.0581 16.1448 21.3086 15.7335 21.4 15.2755L23 6.93049H6" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0">
+                        <rect width="24" height="23.8714" fill="white" transform="translate(0 0.962646)"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </a>
+    </header>
+
+    <!-- mobile menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-body px-0">
+            <ul class="list-unstyled">
+                <button class="w-100 p-3 pe-5 border-bottom d-flex align-items-center justify-content-between" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu2">
+                    <span>Каталог</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12L10 8L6 4" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <li class="p-3 border-bottom">
+                    <a href="services.html">Услуги</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="about.html">О компании</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="news.html">Новости</a>
+                </li>
+                <li class="bg-gray-light p-3 border-bottom">
+                    <a class="d-flex align-items-center" href="cart.html">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.00004 14.6666C6.36823 14.6666 6.66671 14.3681 6.66671 13.9999C6.66671 13.6317 6.36823 13.3333 6.00004 13.3333C5.63185 13.3333 5.33337 13.6317 5.33337 13.9999C5.33337 14.3681 5.63185 14.6666 6.00004 14.6666Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.3333 14.6666C13.7015 14.6666 14 14.3681 14 13.9999C14 13.6317 13.7015 13.3333 13.3333 13.3333C12.9651 13.3333 12.6666 13.6317 12.6666 13.9999C12.6666 14.3681 12.9651 14.6666 13.3333 14.6666Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M0.666626 0.666748H3.33329L5.11996 9.59341C5.18092 9.90034 5.3479 10.1761 5.59166 10.3723C5.83541 10.5685 6.14042 10.6727 6.45329 10.6667H12.9333C13.2462 10.6727 13.5512 10.5685 13.7949 10.3723C14.0387 10.1761 14.2057 9.90034 14.2666 9.59341L15.3333 4.00008H3.99996" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="mx-2">Корзина</span>
+                        <span class="rounded-circle bg-orange small px-1">11</span>
+                    </a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <p class="mb-2">Контактная информация:</p>
+                    <a href="tel:+7(917)234-56-78" class="d-flex align-items-center mb-2">
+                        <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6494 14.555 13.8195C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.6079 13.3983 14.63 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5666C5.84926 11.5431 4.48359 10.1774 3.46004 8.56665C2.33336 6.82745 1.6322 4.84731 1.41337 2.78665C1.39671 2.60229 1.41862 2.41649 1.4777 2.24107C1.53679 2.06564 1.63175 1.90444 1.75655 1.76773C1.88134 1.63102 2.03324 1.52179 2.20256 1.447C2.37189 1.37221 2.55493 1.33349 2.74004 1.33332H4.74004C5.06357 1.33013 5.37723 1.4447 5.62254 1.65567C5.86786 1.86664 6.02809 2.15961 6.07337 2.47998C6.15779 3.12003 6.31434 3.74847 6.54004 4.35332C6.62973 4.59193 6.64915 4.85126 6.59597 5.10057C6.5428 5.34988 6.41928 5.57872 6.24004 5.75998L5.39337 6.60665C6.34241 8.27568 7.72434 9.65761 9.39337 10.6066L10.24 9.75998C10.4213 9.58074 10.6501 9.45722 10.8994 9.40405C11.1488 9.35087 11.4081 9.37029 11.6467 9.45998C12.2516 9.68568 12.88 9.84223 13.52 9.92665C13.8439 9.97234 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.953 14.6667 11.28Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>+7 (917) 234-56-78</span>
+                    </a>
+                    <a href="mailto:company@mail.ru" class="d-flex align-items-center mb-2">
+                        <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.00004 10.6666C9.4728 10.6666 10.6667 9.47268 10.6667 7.99992C10.6667 6.52716 9.4728 5.33325 8.00004 5.33325C6.52728 5.33325 5.33337 6.52716 5.33337 7.99992C5.33337 9.47268 6.52728 10.6666 8.00004 10.6666Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.6667 5.33333V8.66666C10.6667 9.19709 10.8774 9.7058 11.2525 10.0809C11.6276 10.4559 12.1363 10.6667 12.6667 10.6667C13.1971 10.6667 13.7059 10.4559 14.0809 10.0809C14.456 9.7058 14.6667 9.19709 14.6667 8.66666V7.99999C14.6666 6.49535 14.1575 5.03498 13.2222 3.85635C12.2869 2.67772 10.9804 1.85014 9.51514 1.50819C8.04986 1.16624 6.512 1.33002 5.15161 1.9729C3.79122 2.61579 2.68831 3.69996 2.02222 5.04914C1.35613 6.39832 1.16602 7.93315 1.48283 9.40407C1.79963 10.875 2.6047 12.1955 3.76713 13.1508C4.92957 14.1062 6.381 14.6402 7.88543 14.6661C9.38985 14.692 10.8588 14.2082 12.0534 13.2933" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>company@mail.ru</span>
+                    </a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <p class="mb-2">Рабочие часы:</p>
+                    <p class="d-flex align-items-center mb-2">
+                        <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.00004 14.6666C11.6819 14.6666 14.6667 11.6818 14.6667 7.99992C14.6667 4.31802 11.6819 1.33325 8.00004 1.33325C4.31814 1.33325 1.33337 4.31802 1.33337 7.99992C1.33337 11.6818 4.31814 14.6666 8.00004 14.6666Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 4V8L10.6667 9.33333" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>с 7:00 до 22:00 мск</span>
+                    </p>
+                    <p class="mb-0">Вне рабочее время просим оставить заявку</p>
+                </li>
+                <li class="bg-gray-light p-3 border-bottom">
+                    <a href="" class="dashed">Оставить заявку</a>
+                </li>
+                <li class="bg-gray-light p-3">
+                    <a href="" class="dashed">Заказать звонок</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- mobile menu 2 -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu2">
+        <div class="offcanvas-header flex-column align-items-start border-bottom">
+            <button class="d-flex align-items-center mb-3" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.6667 8L3.33341 8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 12.6667L3.33333 8.00008L8 3.33341" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Назад</span>                    
+            </button>
+            <div class="c-accent">Каталог</div>
+        </div>
+        <div class="offcanvas-body px-0">
+            <!-- furniture materials -->
+            <ul class="list-unstyled">
+                <li class="p-3 border-bottom fw-6">
+                    <a href="catalogue.html">Мебельные материалы</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">ЛДСП</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">ХДФ</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">МДФ</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">ЛМДФ</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">ДВПО</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">ЛХДФ</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">Столешницы</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">Мебельная фурнитура</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">Кромка ПВХ</a>
+                </li>
+            </ul>
+            <!-- сonstruction materials -->
+            <ul class="list-unstyled">
+                <li class="p-3 border-bottom fw-6">
+                    <a href="catalogue.html">Строительные материалы</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">Фанера ФК</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">Фанера ФСФ</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">Фанера ламинированная</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">ДВП</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">ОСБ-3</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">ДСП</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">Полимерная панель ТИТ</a>
+                </li>
+                <li class="p-3 border-bottom">
+                    <a href="category.html">Фанера ФБВ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 
     <main class="mb-5">
         <div class="container">

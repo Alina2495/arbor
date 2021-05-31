@@ -21,6 +21,10 @@ body {
     min-height: 100%;
 }
 
+.offcanvas-start {
+    max-width: 270px;
+}
+
 .open-sans {
     font-family: 'Open Sans', sans-serif;
     line-height: normal;
@@ -366,13 +370,20 @@ legend {
 }
 
 .about-bg {
+    min-height: 28vw;
     background: url('../img/images/about.jpg') no-repeat center;
+    background-size: cover;
     .offset-lg-6 {
         background: rgba(244, 244, 244, 0.6);
         &::after {
             content: '';
+            position: absolute;
             width: 100%;
             height: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
             filter: blur(4px);
         }
     }
@@ -396,7 +407,7 @@ legend {
         height: fit-content;
     }
     .swiper-wrapper {
-        padding: 5% 0;
+        padding: 9% 0;
     }
     .swiper-slide {
         height: 100%;
@@ -407,7 +418,7 @@ legend {
         img {
             object-fit: cover;
             object-position: center;
-            height: 14vh;
+            height: 17vh;
         }
         &.swiper-slide-active {
             transform: scale(2);
@@ -420,9 +431,9 @@ legend {
             z-index: 2;
         }
     }
-    .swiper-button-next {
-        right: 4vw;
-    }
+    // .swiper-button-next {
+    //     right: 4vw;
+    // }
 }
 
 .quantity-el {
@@ -449,7 +460,7 @@ legend {
 
 .company-news {
     .new-img {
-        height: 24vw;
+        height: 22vw;
     }
     p {
         overflow-y: hidden;

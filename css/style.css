@@ -11,6 +11,10 @@ body {
   min-height: 100%;
 }
 
+.offcanvas-start {
+  max-width: 270px;
+}
+
 .open-sans {
   font-family: 'Open Sans', sans-serif;
   line-height: normal;
@@ -384,7 +388,9 @@ legend {
 }
 
 .about-bg {
+  min-height: 28vw;
   background: url("../img/images/about.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .about-bg .offset-lg-6 {
@@ -393,8 +399,13 @@ legend {
 
 .about-bg .offset-lg-6::after {
   content: '';
+  position: absolute;
   width: 100%;
   height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   -webkit-filter: blur(4px);
           filter: blur(4px);
 }
@@ -418,7 +429,7 @@ legend {
 }
 
 .our-production .swiper-wrapper {
-  padding: 5% 0;
+  padding: 9% 0;
 }
 
 .our-production .swiper-slide {
@@ -436,7 +447,7 @@ legend {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  height: 14vh;
+  height: 17vh;
 }
 
 .our-production .swiper-slide.swiper-slide-active {
@@ -451,10 +462,6 @@ legend {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   z-index: 2;
-}
-
-.our-production .swiper-button-next {
-  right: 4vw;
 }
 
 .quantity-el {
@@ -478,7 +485,7 @@ legend {
 }
 
 .company-news .new-img {
-  height: 24vw;
+  height: 22vw;
 }
 
 .company-news p {
