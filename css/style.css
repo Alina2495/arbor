@@ -24,12 +24,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.position-relative:hover .cart-hover {
+.cart-hover-main:hover .cart-hover {
   -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.position-relative:hover .bg-gray-light {
+.cart-hover-main:hover .bg-gray-light {
   background-color: transparent;
 }
 
