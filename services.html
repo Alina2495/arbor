@@ -63,7 +63,7 @@
                             </svg>
                             <a class="fs-5" href="mailto:company@mail.ru">company@mail.ru</a>
                         </span>
-                        <button class="dashed p-0 ps-4 ps-xl-0 mx-xl-4">Оставить заявку</button>
+                        <button data-bs-toggle="modal" data-bs-target="#callModal" class="dashed p-0 ps-4 ps-xl-0 mx-xl-4">Оставить заявку</button>
                     </div>
                     <!-- tel -->
                     <span class="d-flex align-items-center">
@@ -954,6 +954,66 @@
             </div>
         </div>
     </footer>
+
+    <!-- CALLBACK modal -->
+    <div class="modal fade" id="callModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="callModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-10">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close mt-xxl-2 me-xxl-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form class="modal-body col-lg-10 px-xl-4 mx-auto pt-0 pb-5">
+                    <h3 class="h4 mb-4">Заказать обратный звонок</h3>
+                    <fieldset class="mb-4">
+                        <label for="user-name" class="mb-1 required">Имя</label>
+                        <input id="user-name" type="text" class="form-control" required>
+                    </fieldset>
+                    <fieldset class="mb-4">
+                        <label for="user-tel" class="mb-1 required">Телефон</label>
+                        <input id="user-tel" type="tel" class="form-control" required>
+                    </fieldset>
+                    <fieldset class="mb-4">
+                        <label for="user-email" class="mb-1">Время звонка</label>
+                        <input id="user-email" type="time" class="form-control">
+                    </fieldset>
+                    <button class="bttn mx-auto mb-4 py-3" data-bs-dismiss="modal">Отправить</button>
+                    <p class="mb-0"><span class="required"></span> — обязательно для заполнения </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal order -->
+    <div class="modal fade" id="checkoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-10">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close mt-xxl-2 me-xxl-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body col-lg-9 mx-auto text-center pt-0 pb-5">
+                    <h3 class="h2 mb-4 mb-xl-5">Спасибо за заказ!</h3>
+                    <p class="mb-4 mb-xl-5 fs-5">В ближайшее время с Вами свяжется наш менеджер для обсуждения выбранных Вами дополнительных услуг</p>
+                    <button class="bttn" data-bs-dismiss="modal">Ок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Modal -->
+    <div class="modal fade" id="paymentQRModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="paymentQRModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-10">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close mt-xxl-2 me-xxl-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body col-md-11 col-lg-8 mx-auto text-center pt-0 pb-5">
+                    <h3 class="h2 mb-4">Оплата по QR коду</h3>
+                    <p class="mb-4 fs-5">Оплатите заказ при помощи приложения СбербанкОнлайн или приложения Вашего банка. Для этого отсканируйте код при помощи мобильного приложения</p>
+                    <img class="mw-100" src="img/images/QR.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/jquery(v.3.5.1).min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
